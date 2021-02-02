@@ -20,7 +20,7 @@ else
     echo $ff
     if [[ $ff != *"_thumbnail.jpg"* ]]
     then
-      convert -quality 90 -resize 320x320 "$ff" "./${ff%.jpg}_thumbnail.jpg"
+      convert -quality 90 -resize 320x320 "$ff" "${ff%.jpg}_thumbnail.jpg"
       echo "Create file ${ff%.jpg}_thumbnail.jpg"
     fi
   done < $1
